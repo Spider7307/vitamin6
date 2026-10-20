@@ -40,10 +40,7 @@ app.patch('/books/:id', (req, res) => {
         return res.status(404).json({error: "Book not found"});
     } else {
         book.title=title;
-        return res.status(200).json({
-            message:"Book updated successfully",
-            book:book,
-        });
+        return res.status(200).json(book);
     }
 });
 
