@@ -70,7 +70,7 @@ app.get('/secrets', (req, res) => {
     // TODO: Access the SPOTIFY_KEY from process.env and send it back to the client
     const spotifyKey = process.env.SPOTIFY_KEY;
     if (!spotifyKey) {
-        return res.send("Error: SPOTIFY_KEY is not defined in the environment variables!");
+        return res.send("Error: SPOTIFY_KEY isn't defined properly!");
     }
     res.send(spotifyKey);
 });
